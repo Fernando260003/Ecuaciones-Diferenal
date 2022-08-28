@@ -1,0 +1,1110 @@
+\documentclass[l etterpaper,11pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=black]{hyperref}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+
+\Large Ecuaciones diferenciales para las que se puede tener soluciones explícitas \par
+
+\vspace{5cm}
+
+\Large Profesor: \par
+\Large Jhonatan Collazos Ramírez \par
+\vspace{6cm}
+
+\Large Autor: \par
+\Large Daniel Fernando Ordoñez Moncayo \par
+\vspace{6cm}
+
+{\Large Universidad del Cauca \par}
+{\large Facultad de Ingenier\'ia civil \par}
+{\large Programa de Ingenier\'ia civil \par}
+{\large Ecuaciones diferenciales  \par}
+{\large Santander de Quilichao - Cauca \par}
+{\Large Agosto de 2022 \par}
+\end{titlepage}
+
+
+\pagebreak
+
+\tableofcontents
+
+
+\newpage
+\section{Introducción}
+
+En carreras como ingenieria tenemos una relacion directa con los numeros,y necesitamos de diverosos metodos matematicos que nos lleven a solucionar problemas que se nos presentan en nuetra vida profesional,para ello en el presente documento se van a exponer algunos de los metodos matematicos para resolver ecuaciones diferenciales para las que se puden obtener soluciones exactas,usaremos metodos como la solucion de ecuaciones diferenciales mediante exctas y factor integrante al igual que por variables separables y pos sustitucion.
+
+\newpage
+
+{\section{Ecuaciones diferenciales exactas}}
+
+Para comprender mejor las ecuaciones diferenciales exactas veamos un teorema que nos permite saber si la ecuación diferencial es exacta o no. Si la ecuación es exacta, entonces tenemos garantizado la existencia de una función $f$ tal que $f\left(x,y\right)=c$, dicha función será la solución de la ecuación exacta.
+
+
+
+\subsection{Teorema 1}
+
+ Sean $ M(x,y) $ y $ N(x,y)$ funciones continuas y con primeras derivadas parciales continuas en una región rectangular U definida por $a<x<b $ y $ c<y<d.$ Entonces, una condición necesaria y suficiente para que\\
+\begin{center}
+$M(x,y)$  y $ N(x,y)$\\
+\end{center}
+
+
+Sea una diferencial exacta es que\\
+
+\begin{flushleft} 
+$(1)$
+\end{flushleft} 
+\begin{center}
+$\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$ 
+\end{center} 
+
+
+
+\subsubsection{Demostración}
+
+Supongamos que $ M(x,y)dx+N(x,y)dy $ es exacta, entonces por definición existe alguna función $ f $tal que para toda $ x\ $ en $ U $ se satisface lo siguiente.\\
+\begin{center}
+$M(x,y)dx+N(x,y)dy=\frac{\partial f}{\partial x}dx+\frac{\partial f}{\partial y}dy$ \\
+\end{center}
+
+Esta relación sólo se cumple si\\
+\begin{center}
+$M\left(x,y\right)=\frac{\partial f}{\partial x}\ \ \ \ \ \ y\ \ \ \ \ N\left(x,y\right)=\frac{\partial f}{\partial y}$\\
+\end{center}
+
+Si derivamos parcialmente la expresión\\
+\begin{center}
+
+$M(x,y)=\frac{\partial f}{\partial x}$
+\end{center}
+
+con respecto a y en ambos lados, obtenemos
+\begin{center}
+
+$\frac{\partial M}{\partial y}=\frac{\partial}{\partial y}(\frac{\partial f}{\partial x})=\frac{\partial^2f}{\partial y\partial x}=\frac{\partial^2f}{\partial y\partial x}=\frac{\partial}{dx}(\frac{\partial f}{\partial y})=\frac{\partial N}{\partial x}$
+\end{center}
+
+Donde
+\begin{center}
+
+$\frac{\partial^2f}{\partial y\partial x}=\frac{\partial^2f}{\partial y\partial x}$\\
+
+\end{center}
+
+Se cumple debido a que las primeras derivadas parciales de $ M(x,y)\ y\ N(x,y) $ son continuas en $ U.$
+Si es posible encontrar una función $f$ tal que se cumple (5), entonces la condición
+\begin{center}
+
+ $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$\\
+\end{center}
+
+Es necesaria y suficiente. Encontrar la función $f $en realidad corresponde a un método de resolución de ecuaciones exactas y lo desarrollaremos a continuación.
+
+
+
+
+
+\subsubsection{Solución a las ecuaciones exactas}
+
+
+La ecuación diferencial que queremos resolver es de la forma
+
+La ecuación diferencial que queremos resolver es de la forma
+\begin{center}
+
+$M(x,y)dx+N(x,y)dy=0$\\
+\end{center}
+
+Por el teorema anterior sabemos que siempre y cuando se cumpla que
+\begin{center}
+
+$\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$\\
+\end{center}
+
+entonces debe existir una función f para la que
+\begin{center}
+
+$\frac{\partial f}{\partial x}=M(x,y)\ \ \ y\ \ \ \frac{\partial f}{\partial y}=N(x,y)$\\
+\end{center}
+
+Para obtener la función $ f(x,y) $ debemos integrar la primera ecuación con respecto a $ x $ manteniendo a $ y $ constante o integrar la segunda ecuación con respecto a $ y\ $ manteniendo a $ x $ constante, vamos a hacer el primer caso 
+Tomando el primer caso, integremos la primera ecuación con respecto a $ x.$
+\begin{flushleft} 
+$(3)$
+\end{flushleft}
+
+\begin{center}
+
+$\int\partial f\partial xdx=\int M(x,y)dx$\\
+$f(x,y)=\int M(x,y)dx+g(y)$\\
+\end{center}
+
+Hemos hecho uso del teorema fundamental del cálculo y la función g(y) corresponde a la constante de integración, es constante en $ x, $ pero sí puede variar en y ya que en este caso la estamos considerando como una constante al hacer la integral.
+Ahora derivemos a (6) con respecto a $ y $. 
+\begin{center}
+
+$\frac{\partial f}{\partial y}=\frac{\partial}{\partial y}(\int M(x,y)dx+g(y))=\frac{\partial}{\partial y}(\int M(x,y)dx)+\frac{dg}{dy}$\\
+\end{center}
+
+Pero
+\begin{center}
+
+$\frac{\partial f}{\partial y}=N(x,y)$\\
+\end{center}
+
+Entonces,
+\begin{center}
+
+$\frac{\partial}{\partial y}(\int M(x,y)dx)+\frac{dg}{dy}=N(x,y)$\\
+\end{center}
+
+Despejemos a
+\begin{center}
+
+
+$\frac{dg}{dy}=g\prime(y)$\\
+\end{center}
+
+Se tiene,
+\begin{flushleft} 
+$(4)$
+\end{flushleft}
+
+\begin{center}
+
+$g\prime(y)=N(x,y)-\frac{\partial}{\partial y}(\int M(x,y)dx)$\\
+\end{center}
+
+Lo que nos interesa en obtener la función $ f(x,y),\ $ así que podemos integrar la ecuación (4) con respecto a y y sustituir $ g(y) $ en la ecuación (3). Como sabemos, la solución implícita es $ f(x,y)=c.$  Integremos la ecuación (4).
+\begin{flushleft} 
+$(5)$
+\end{flushleft}
+
+\begin{center}
+
+$g(y)=\int N(x,y)dy-\int[\frac{\partial}{\partial y}(\int M(x,y)dx)]dy$\\
+\end{center}
+
+Sustituimos el resultado (5) en la ecuación (3) e igualamos el resultado a la constante $ c.$
+\begin{center}
+\begin{flushleft} 
+$(6)$
+\end{flushleft}
+
+
+$f(x,y)=\int M(x,y)dx+\int N(x,y)dy-\int[\frac{\partial}{\partial y}(\int M(x,y)dx)]dy=c$\\
+\end{center}
+
+De esta manera habremos encontrado una solución implícita de la ecuación diferencial exacta.
+Una observación interesante es que la función $ g\prime(y) $ es independiente de $ x, $ la manera de comprobarlo es con el siguiente resultado.
+\begin{center}
+
+$\frac{\partial g}{\partial x}=\frac{\partial}{\partial x}[N(x,y)-\partial\partial y(\int M(x,y)dx)]$\\
+$=\frac{\partial N}{\partial x}-\frac{\partial}{\partial x}(\frac{\partial}{\partial y}\int M(x,y)dx)$\\
+$=\frac{\partial N}{\partial x}-\frac{\partial}{\partial y}(\frac{\partial}{\partial x}\int M(x,y)dx)$\\
+$=\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}$\\
+$=0$\\
+\end{center}
+
+Ya que
+\begin{center}
+
+$\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$\\
+\end{center}
+
+Las ecuaciones (3), (5) y (6) son el resultado de tomar el primer caso. Si realizas el segundo caso en el que a la ecuación
+\begin{center}
+
+$\frac{\partial f}{\partial y}=N(x,y)$\\
+\end{center}
+
+se integra con respecto a $ y $ y al resultado se deriva con respecto a $ x $ obtendremos las expresiones análogas, dichas expresiones son, respectivamente
+\begin{flushleft} 
+$(7)$
+\end{flushleft}
+
+\begin{center}
+
+$f(x,y)=\int N(x,y)dy+h(x)$\\
+\end{center}
+\begin{flushleft} 
+$(8)$
+\end{flushleft}
+
+\begin{center}
+
+$h(x)=\int M(x,y)dx-\int[\partial\partial x(\int N(x,y)dy)]dx$\\
+\end{center}
+
+\begin{center}
+
+$y$\\
+\end{center}
+
+\begin{flushleft} 
+$(9)$
+\end{flushleft}
+
+\begin{center}
+
+
+$f(x,y)=\int N(x,y)dy+\int M(x,y)dx-\int[\frac{\partial}{\partial x}(\int N(x,y)dy)]dx=c$\\
+
+\end{center}
+
+
+
+
+
+
+
+
+\subsection{Método de solución de ecuaciones diferenciales exactas}
+
+Hemos desarrollado la teoría sobre cómo obtener la solución $ f(x,y) $ de las ecuaciones diferenciales exactas. Debido a que no se recomienda memorizar los resultados, presentamos a continuación la siguiente serie de pasos o algoritmo que se recomiendan seguir para resolver una ecuación diferencial exacta.
+
+\begin{enumerate}
+\item  El primer paso es verificar que la ecuación diferencial
+\begin{center}
+$M(x,y)dx+N(x,y)dy=0$\\
+\end{center}
+
+sea exacta para garantizar la existencia de la función $\ f  $ tal que $ f(x,y)=c. $ Para verificar este hecho usamos el criterio para una diferencial exacta que consiste en verificar que se cumple la relación
+\begin{center}
+
+$\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$\\
+\end{center}
+
+\item  Una vez que verificamos que la ecuación es exacta tenemos garantizado que existe una función f\ tal que $f(x,y)=c\ $es una solución implícita de la ecuación diferencial. Para determinar dicha función definimos
+\begin{center}
+
+$\frac{\partial f}{\partial x}=M(x,y)\ \ \ y\ \ \ \frac{\partial f}{\partial y}=N(x,y)$\\
+\end{center}
+
+\item  El siguiente paso es integrar alguna de las ecuaciones anteriores en su respectiva variable, se recomienda integrar la que sea más sencilla de resolver, de esta manera obtendremos
+\begin{center}
+
+$f(x,y)=\int M(x,y)dx+g(y)\ \ \ \ o\ \ \ \ f(x,y)=\int N(x,y)dy+h(x)$\\
+
+\end{center}
+
+\item  Después derivamos parcialmente a la función $ f(x,y)\ $ con respecto a la variable y o x según la elección hecha en el paso anterior, de manera que obtendremos el resultado
+\begin{center}
+
+$\frac{\partial f}{\partial y}=\frac{\partial}{\partial y}(\int M(x,y)dx)+\frac{dg}{dy}=N(x,y)$\\
+\end{center}
+
+\begin{flushleft}
+O bien,\\
+ \end{flushleft}
+\begin{center}
+$\frac{\partial f}{\partial x}=\frac{\partial}{\partial x}(\int N(x,y)dy)+\frac{dh}{dx}=M(x,y)$\\
+\end{center}
+
+\item De los resultados anteriores obtendremos una expresión para $\frac{dg}{dy}, $ o $ para \frac{dh}{dx}, $ debemos integrar estas expresiones para obtener las funciones $ g(y) $ o $ h(x).$
+\item El último paso es sustituir las funciones $ g(y) $ o $ h(x) $ en la ecuación $ f(x,y)=c  $ lo que nos devolverá, en general, una solución implícita de la ecuación diferencial exacta.
+\end{enumerate}
+
+
+
+\subsubsection{Ejemplo}
+
+Vamos a resolver la siguiente ecuación diferencial
+\begin{center}
+
+$({4x}^3-{4xy}^2+y)dx+({4y}^3-{4x}^2y+x)dy=0$\\
+
+\end{center}
+
+Solución:\\
+La ecuación diferencial es de la forma $ M(x,y)dx+N(x,y)dy=0 ,$ de manera que podemos definir
+\begin{center}
+$M(x,y)={4x}^3-{4xy}^2+y\ \ \ \ \ y\ \ \ \ N(x,y)={4y}^3-{4x}^2y+x$\\
+\end{center}
+
+Ambas funciones son continuas y tienen derivadas parciales continuas en cualquier región$  U\in R2,  $ entonces podemos aplicar el criterio para una diferencial exacta. Verifiquemos que se satisface la relación (1).
+\begin{center}
+
+$\frac{\partial M}{\partial y}=-8xy+1\ \ \ \ \ y\ \ \ \ \ \frac{\partial N}{\partial x}=-8xy+1$\\
+\end{center}
+
+En efecto,
+\begin{center}
+$\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$\\
+\end{center}
+
+Por lo tanto, la ecuación diferencial sí es exacta, esto nos garantiza la existencia de una función $ f $tal que $ f(x,y)=c $ es solución, entonces podemos definir
+\begin{center}
+
+$\frac{\partial f}{\partial x}=M(x,y)={4x}^3-{4xy}^2+y\ \ \ \ \ \ y\ \ \ \ \ \ \frac{\partial f}{\partial y}=N(x,y)={4y}^3-{4x}^2y+x$\\
+
+\end{center}
+
+El tercer paso nos indica que debemos integrar una de las ecuaciones anteriores, en este caso elegiremos integrar la ecuación
+\begin{center}
+
+$\frac{\partial f}{\partial x}={4x}^3-{4xy}^2+y$\\
+\end{center}
+
+con respecto a la variable $ x.$
+\begin{center}
+
+$\int\frac{\partial f}{\partial x}dx=\int({4x}^3-{4xy}^2+y)dx$\\
+\end{center}
+
+Del lado izquierdo aplicamos el teorema fundamental del cálculo y del lado derecho resolvemos la integrar, el resultado es
+\begin{center}
+
+$f(x,y)=x^4-{2x}^2{{2x}^2y}^2+xy+g(y)$\\
+\end{center}
+
+La función $ g(y) $ es la constante que considera a todas las constantes que aparecen al integrar y decimos que es constante porque no depende de la variable $ x, $ pero es posible que pueda depender de la variable $y$.
+El cuarto paso es derivar la última ecuación con respecto a la variable $ y $ ya que deseamos conocer a $\frac{dg}{dy}=g\prime(y).$
+\begin{center}
+
+$\frac{\partial f}{\partial y}=-{4x}^2y+x+\frac{dg}{dy}$\\
+\end{center}
+
+Y sabíamos que
+\begin{center}
+
+$\frac{\partial f}{\partial y}={4y}^3-{4x}^2y+x$\\
+\end{center}
+
+Igualando ambas ecuaciones, obtenemos
+\begin{center}
+
+${-4x}^2y+x+\frac{dg}{dy}={4y}^3{-4x}^2y+x$\\
+\end{center}
+
+Para que esta igualdad se cumpla es necesario que
+\begin{center}
+
+$\frac{dg}{dy}={4y}^3$\\
+\end{center}
+
+Ahora que ya conocemos a $  \frac{dg}{dy}=g\prime(y), $ la integramos con respecto a $y$. Esto corresponde al penúltimo paso.
+\begin{center}
+
+$\int\frac{dg}{dy}dy=\int{4y}^3dy$\\
+$g(y)=y4$\\
+\end{center}
+
+El último paso es sustituir el resultado $ g(y) $ en la función $\ f(x,y)=c.$  En la integración anterior omitimos a las constantes porque podemos englobarlas en la constante $c.$4
+\begin{center}
+
+$f(x,y)=x^4-{2x}^2y^2+xy+y^4=c$\\
+\end{center}
+
+de donde
+\begin{center}
+
+${(x^2-y^2)}^2+xy=c$\\
+\end{center}
+
+Por lo tanto, la solución (implícita) de la ecuación diferencial exacta
+\begin{center}
+
+$({4x}^3-{4xy}^2+y)dx+({4y}^3-{4x}^2y+x)dy=0$\\
+\end{center}
+
+Es
+\begin{center}
+
+${(x^2-y^2)}^2+xy=c$\\
+\end{center}
+
+
+Por su puesto que hay ecuaciones diferenciales de la forma $ M(x,y)dx+N(x,y)dy=0 ,$ que no cumplen con la condición (1), es decir, que no son exactas, en estos casos es posible apoyarnos de una función auxiliar tal que si multiplicamos a la ecuación diferencial por esta función se volverá exacta, si esto ocurre a dicha función la llamamos factor integrante. Así es, usaremos un método similar al método por factor integrante de las ecuaciones lineales, pero esta vez es para convertir a una ecuación diferencial no exacta en exacta.
+
+
+{\section{Factor integrante }}
+
+La finalidad de multiplicar por un factor integrante será de ayudará a trabajar con ecuaciones diferenciales de la forma
+\begin{center}
+
+$M(x,y)dx+N(x,y)dy=0$\\
+\end{center}
+
+que no son exactas. Lo que se espera es que multiplicando por un factor integrante $ \mu(x,y) $  a la ecuación no exacta ésta se vuelva una ecuación exacta.
+Consideremos la ecuación
+\begin{center}
+
+$M(x,y)dx+N(x,y)dy=0$\\
+\end{center}
+
+pero que no es exacta, esto significa que el lado izquierdo de la ecuación no corresponde a la diferencial de alguna función $ f(x,y). $ Supongamos que existe una función $ \mu(x,y) $ tal que al multiplicar la ecuación diferencial por esta función se vuelve una ecuación diferencial exacta. Es decir, la ecuación
+\begin{flushleft} 
+$(10)$
+\end{flushleft}
+
+\begin{center}
+
+$\mu(x,y)M(x,y)dx+\mu(x,y)N(x,y)dy=0$\\
+\end{center}
+
+ahora es exacta y se puede resolver con el método que ya conocemos. Lo que veremos ahora es un método para determinar el factor integrante $ \mu(x,y). $
+Por el criterio de diferencial exacta, la ecuación diferencial (10) es exacta si
+\begin{flushleft} 
+$(11)$
+\end{flushleft}
+
+\begin{center}
+
+$\frac{\partial(\mu M)}{\partial y}=\frac{\partial(\mu N)}{\partial x}$\\
+\end{center}
+
+Usando la regla del producto, la ecuación anterior se puede escribir como
+\begin{center}
+
+$\mu\frac{\partial M}{\partial y}+\frac{\partial\mu}{\partial y}M=\mu\frac{\partial N}{\partial x}+\frac{\partial\mu}{\partial x}N$\\
+\end{center}
+
+Reordenando los términos obtenemos la siguiente expresión.
+\begin{flushleft} 
+$(12)$
+\end{flushleft}
+
+\begin{center}
+
+$\frac{\partial\mu}{\partial x}N-\frac{\partial\mu}{\partial y}M=(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x})\mu$\\
+\end{center}
+
+
+Para determinar la función $\mu\left(x,y\right)$ debemos resolver esta ecuación diferencial parcial, sin embargo, no estamos en condiciones de hacerlo, pues no sabemos resolver ecuaciones diferenciales parciales. Para simplificar el problema vamos a considerar la hipótesis de que la función $  \mu\left(x,y\right) $ depende sólo de una variable, consideremos por ejemplo que $\mu$ depende sólo de $ x$, así se cumple que
+\begin{center}
+
+$\frac{\partial\mu}{\partial x}=\frac{d\mu}{dx}\ \ \ \ y\ \ \ \ \frac{\partial\mu}{\partial y}=0$\\
+\end{center}
+
+Con estas hipótesis la ecuación (12) se puede escribir de la siguiente forma.
+\begin{flushleft} 
+$(13)$
+\end{flushleft}
+
+\begin{center}
+
+$\frac{d\mu}{dx}=\frac{1}{N}(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x})\mu$\\
+\end{center}
+
+Seguimos en problemas si el cociente de la derecha depende tanto de $ x$ como de y. En el caso en el que dicho cociente sólo depende de $ x, $entonces la ecuación será separable, así como lineal.
+Supongamos que la ecuación (14) sólo depende de la variable $ x $, entonces dividimos toda la ecuación por $ \mu $ para separar las variables.
+\begin{center}
+
+$\frac{1}{\mu}\frac{d\mu}{dx}=\frac{1}{N}(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x})$\\
+\end{center}
+
+Integremos ambos lados de la ecuación con respecto a la variable $ x $.
+
+\begin{center}
+
+$\int{\frac{1}{\mu}\frac{d\mu}{dx}dx}=\int{\frac{1}{N}\left(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right)dx}$\\
+$\ln{\left|\mu\left(x\right)\right|}=\int{\frac{1}{N}\left(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right)dx}$\\
+\end{center}
+
+Finalmente apliquemos la exponencial en ambos lados de la ecuación.
+\begin{flushleft} 
+$(14)$
+\end{flushleft}
+
+\begin{center}
+
+$\mu(x)=e^{\int\frac{1}{N}(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x})dx}$\\
+\end{center}
+
+Es totalmente análogo el caso en el que el factor integrante es sólo función de la variable $ y $, en este caso se cumple
+\begin{center}
+
+$\frac{\partial\mu}{\partial x}=0\ \ \ \ \ y\ \ \ \ \frac{\ \partial\mu}{\ \partial y}=\frac{d\mu}{dy}$\\
+\end{center}
+
+Es así que la ecuación (12) queda de la siguiente forma.
+\begin{flushleft} 
+$(15)$
+\end{flushleft}
+\begin{center}
+
+$\frac{d\mu}{dy}=\frac{1}{M}(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y})\mu$\\
+\end{center}
+
+Si el cociente de la derecha sólo depende de la variable $ y $, entonces se puede resolver la ecuación (15), obteniendo
+\begin{flushleft} 
+$(16)$
+\end{flushleft}
+
+\begin{center}
+
+$\mu(y)=e^{\int\frac{1}{M}(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y})dy}$\\
+\end{center}
+
+Las funciones (14) y (16) corresponden a la forma del factor integrante que vuelven a la ecuación no exacta en exacta, según las condiciones que se presenten.
+A manera de resumen, para el caso en el que la ecuación diferencial
+\begin{center}
+
+$M(x,y)dx+N(x,y)dy=0$\\
+\end{center}
+
+
+No es exacta probamos los siguientes dos casos:	
+\begin{enumerate}
+
+\item Si
+\begin{center}
+
+$\frac{1}{N}(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x})$\\
+\end{center}
+
+es una función sólo de $ x, $ entonces un factor integrante para la ecuación (10) es:
+
+\begin{center}
+
+$\mu\left(x\right)=e^{\int{\frac{1}{N}\left(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right)dx}}$\\
+\end{center}
+
+\item Si
+\begin{center}
+$\frac{1}{M}(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y})$\\
+\end{center}
+
+es una función sólo de y, entonces un factor integrante para la ecuación (10) es:
+\begin{center}
+
+$\mu\left(y\right)=e^{\int{\frac{1}{M}\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)dy}}$\\
+\end{center}
+
+\end{enumerate}
+
+
+
+
+
+\subsection{Ejemplo}
+
+
+Vamos a resolver la siguiente ecuación diferencial no exacta.
+\begin{center}
+
+$(1-\frac{y}{x}e^{y/x})dx+e^{y/x}dy=0$\\
+\end{center}
+
+Solución: Verifiquemos que no es una ecuación exacta, definamos
+\begin{center}
+
+$M\left(x,y\right)=1-\frac{y}{x}e^{y/x}\ \ \ \ \ \ y\ \ \ \ \ N\left(x,y\right)=e^{y/x}$\\
+\end{center}
+
+Calculemos las derivadas parciales correspondientes.
+\begin{center}
+
+$\frac{\partial M}{\partial y}=-\frac{1}{x}e^\frac{y}{x}-\frac{y}{x^2}e^\frac{y}{x}\ \ \ \ \ y\ \ \ \ \ \frac{\partial N}{\partial x}=-\frac{y}{x^2}e^\frac{y}{x}$\\
+
+\end{center}
+
+Como
+\begin{center}
+
+$\frac{\partial M}{\partial y}\neq\frac{\partial N}{\partial x}$\\
+\end{center}
+
+entonces la ecuación diferencial no es exacta. Para hacerla exacta debemos encontrar un factor integrante que dependa de $ x $ o de  $ y $ , para ello primero debemos ver si el cociente
+\begin{center}
+
+
+$\frac{1}{N}(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}) $\\
+\end{center}
+
+es una función sólo de $ x $ o si el cociente
+\begin{center}
+
+$\frac{1}{M}(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}) $\\
+\end{center}
+
+es una función sólo de $ y $. Calculemos ambos cocientes usando los resultados anteriores.
+\begin{center}
+
+$\frac{1}{M}\left(\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}\right)=\left(1-\frac{y}{x}e^{y/x}\right)^{-1}\left(-\frac{y}{x^2}e^{y/x}+\frac{1}{x}e^\frac{y}{x}+\frac{y}{x^2}e^{y/x}\right)=\frac{\frac{1}{x}e^{y/x}}{1-\frac{y}{x}e^{y/x}}$\\
+\end{center}
+
+Y
+\begin{center}
+
+$\frac{1}{N}\left(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right)=e^{-y/x}\left(-\frac{1}{x}e^{y/x}-\frac{y}{x^2}e^{y/x}+\frac{y}{x^2}e^{y/x}\right)=-\frac{1}{x}$\\
+\end{center}
+
+
+Este último cociente es el que nos sirve ya que sólo depende de la variable$ x.$ Calculemos el factor integrante, en este caso corresponde a la expresión (14).
+\begin{center}
+
+$\mu\left(x\right)=e^{\left[\int{\frac{1}{N}\left(\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right)}\right]}$\\
+$=e^{\left[\int{\frac{1}{x}dx}\right]}$\\
+
+$=-e^{\ln{\left|x\right|}}$\\
+$=x^{-1}$\\
+\end{center}
+
+Por lo tanto, el factor integrante es
+\begin{center}
+
+$\mu(x)=\frac{1}{x}$\\
+\end{center}
+
+Multipliquemos ambos lados de la ecuación original por el factor integrante.
+\begin{center}
+
+$\frac{1}{x}(1-\frac{y}{x}e^{y/x})dx+\frac{1}{x}e^{y/x}dy=0$\\
+$(\frac{1}{x}-\frac{y}{x^2}e^{y/x})dx+\frac{1}{x}e^{y/x}dy=0$\\
+\end{center}
+
+Verifiquemos que la última expresión corresponde a una ecuación diferencial exacta. Definamos
+\begin{center}
+
+$M\prime(x,y)=\mu(x)M(x,y)\ \ \ \ \ y\ \ \ \ \ N\prime(x,y)=\mu(x)N(x,y) $\\
+\end{center}
+
+Entonces,
+\begin{center}
+
+$M\prime(x,y)=\frac{1}{x}-\frac{y}{x^2}e^{y/x}\ \ \ \ \ y\ \ \ \ \ N^(x,y)=\frac{1}{x}e^{y/x}$\\
+\end{center}
+
+Calculemos las derivadas parciales correspondientes.
+\begin{center}
+
+$\frac{\partial M\prime}{\partial y}=-\frac{1}{x^2}e^{y/x}-\frac{y}{x^3}e^{y/x}\ \ \ \ \ y\ \ \ \ \ \frac{\partial N\prime}{\partial x}=-\frac{1}{x^2}e^{y/x}-\frac{y}{x^3}e^{y/x}$\\
+\end{center}
+
+En efecto,
+\begin{center}
+
+$\frac{\partial M\prime}{\partial y}=\frac{\partial N\prime}{\partial x}$\\
+\end{center}
+
+La nueva ecuación sí es exacta, esto nos garantiza que existe una función f tal que $ f(x,y)=c $ es solución de la ecuación exacta, dicha función debe satisfacer que
+\begin{center}
+
+$\frac{\partial f}{\partial x}=M\prime(x,y)=\frac{1}{x}-\frac{y}{x^2}e^{y/x}\ \ \ \ \ y\ \ \ \ \frac{\ \partial f}{\ \partial y}=N^(x,y)=\frac{1}{x}e^{y/x}$\\
+\end{center}
+
+Es nuestra elección que ecuación integrar, sin embargo, notamos que la función $ N’(x,y) $ es la más sencilla de integrar, así que integremos esta ecuación con respecto a $ y $.
+\begin{center}
+
+$\int\frac{\ \partial f}{\ \partial y}dy=\int\frac{1}{x}e^{y/x}dy$\\
+$f(x,y)=e^{y/x}+h(x) $\\
+\end{center}
+
+Derivemos parcialmente este resultado con respecto a la variable $ x$.
+\begin{center}
+
+$\frac{\partial f}{\partial x}=-\frac{y}{x^2}e^{y/x}+\frac{dh}{dx}$\\
+\end{center}
+
+Pero sabemos que
+\begin{center}
+
+$\frac{\partial f}{\partial x}=M\prime(x,y)=\frac{1}{x}-\frac{y}{x^2}e^{y/x}$\\
+\end{center}
+
+Igualemos ambas ecuaciones.
+\begin{center}
+
+$\frac{1}{x}-\frac{y}{x^2}e^{y/x}=-\frac{y}{x^2}e^{y/x}+\frac{dh}{dx}$\\
+\end{center}
+
+Para que se cumpla esta igualdad es necesario que
+\begin{center}
+
+$\frac{dh}{dx}=\frac{1}{x}$\\
+\end{center}
+
+Integremos esta ecuación con respecto a $ x $ omitiendo las constantes.
+\begin{center}
+
+$\int\frac{dh}{dx}dx=\int\frac{1}{x}dx
+$h(x)=$\ln{\left|x\right|}$\\
+\end{center}
+
+Sustituimos la función $h(x)$ en la función $ f(x,y) $ e igualamos a una constante $ c $.
+\begin{center}
+
+$f\left(x,y\right)=e^{y/x}+\ln{\left|x\right|}=c$\\
+\end{center}
+
+Apliquemos la función exponencial
+\begin{center}
+
+$e^{{(e}^{y/x}+\ln{(x)})}=e^c$\\
+$e^{e^{y/x}}e^{\ln{(x)}}=k$\\
+$e^{e^{y/x}}x=k$\\
+\end{center}
+
+Donde $ k=ec. $ Por lo tanto, la solución a la ecuación diferencial
+\begin{center}
+
+$(1-\frac{y}{x}e^{y/x})dx+e^{y/x}dy=0$\\
+\end{center}
+
+Es
+\begin{center}
+
+$xe^{e^{y/x}}=k$\\
+\end{center}
+
+
+Aquí concluimos nuestro estudio sobre las ecuaciones diferenciales exactas.
+
+
+\section{Ecuaciones diferenciales separables}
+
+Definición: Una ecuación diferencial de primer orden de la forma
+\begin{equation}
+\frac{dy}{dx}=H(x,y)\\
+\end{equation}
+
+se dice que es separable o que tiene variables separables siempre que $ H(x,y)$  puede escribirse como el producto de una función de $ x $ y una función de $ y $
+\begin{equation}
+H(x,y)=g(x)h(y)
+\end{equation}
+
+Inmediatamente nos damos cuenta que es una ecuación diferencial no lineal debido a que aparece una función dependiente de la variable dependiente $ y.$
+Veamos cómo encontrar la solución general de este tipo de ecuaciones.
+Solución a ecuaciones separables
+Es conveniente definir la función
+\begin{equation}
+h(y)=\frac{1}{f(y)}
+\end{equation}
+
+de tal manera que la ecuación (1) se pueda escribir de la siguiente forma.
+\begin{equation}
+\frac{dy}{dx}=\frac{g(x)}{f(y)}
+\end{equation}
+
+Esta ecuación la podemos reescribir como
+\begin{equation}
+f(y)\frac{dy}{dx}=g(x)
+\end{equation}
+
+Notemos que en el lado derecho de la igualdad tenemos la función que depende de la variable independiente $ x $, mientras que en el lado izquierdo tenemos la función que depende de la variable dependiente $ y, $ en esta situación decimos que hemos separado a la ecuación diferencial.
+Es común encontrar en la literatura que la ecuación (5) se escribe como
+\begin{equation}
+g(x)dx=f(y)dy\\
+\end{equation}
+
+Esta es la forma diferencial de la ecuación (4), es una notación informal, pero nos permite visualizar que hemos sido capaz de separar a las variables, el lado izquierdo sólo depende de $x$ y el lado derecho sólo depende de $ y $.
+Podemos integrar ambos lados de la ecuación. Si consideramos la ecuación en la forma (5), entonces integramos ambos lados con respecto a la variable $x$ y si consideramos la ecuación en la forma (6) integramos con respecto a la variable correspondiente.
+\begin {center}
+
+$\int f(y)dydxdx=\int g(x)dx$\\
+$\int f(y)dy=\int g(x)dx$\\
+\end {center}
+
+Sólo es necesario que las antiderivadas
+\begin{equation}
+F(y)=\int f(y)dy
+\end{equation}
+
+Y
+\begin{equation}
+G(x)=\int g(x)dx
+\end{equation}
+
+existan y puedan resolverse. Una vez resueltas las integrales obtendremos una familia uniparamétrica de soluciones que usualmente se expresa de forma implícita.
+
+
+
+\subsubsection{Método de separación de variables}
+
+De acuerdo a lo anterior, el algoritmo que se recomienda seguir para resolver ecuaciones diferenciales separables es el siguiente.
+\begin{enumerate}
+\item  Dada una ecuación diferencial no lineal de primer orden, el primer paso es identificar si es posible que podamos determinar una función $g=g(x)$ que sólo depende de la variable independiente x y una función $f=f(y)$ que sólo depende de la variable dependiente $y$, si esto es posible escribimos a la ecuación diferencial en la siguiente forma.
+\begin {center}
+$f(y)\frac{dy}{dx}=g(x)$\\
+\end {center}
+
+\item  El segundo paso es integrar ambos lados de la ecuación con respecto a la variable $x$. En este caso debemos considerar en todo momento las constantes de integración.
+\item  Al resolver la integral $\int f(y)dy$ obtendremos la solución $y(x)$ que estamos buscando, ya sea de forma implícita o explicita, ambas formas son válidas.
+\end{enumerate}
+
+Realicemos un ejemplo en el que apliquemos este método.
+
+\subsubsection{Ejemplo}
+
+De acuerdo a lo anterior, el algoritmo que se recomienda seguir para resolver ecuaciones diferenciales separables es el siguiente.
+\begin{enumerate}
+\item  Dada una ecuación diferencial no lineal de primer orden, el primer paso es identificar si es posible que podamos determinar una función $g=g(x)$ que sólo depende de la variable independiente x y una función $f=f(y)$ que sólo depende de la variable dependiente $y$, si esto es posible escribimos a la ecuación diferencial en la siguiente forma.
+\begin {center}
+$f(y)\frac{dy}{dx}=g(x)$\\
+\end {center}
+
+\item  El segundo paso es integrar ambos lados de la ecuación con respecto a la variable $x$. En este caso debemos considerar en todo momento las constantes de integración.
+\item  Al resolver la integral $\int f(y)dy$ obtendremos la solución $y(x)$ que estamos buscando, ya sea de forma implícita o explicita, ambas formas son válidas.
+\end{enumerate}
+
+Realicemos un ejemplo en el que apliquemos este método.
+Ejemplo: Resolver la ecuación diferencial
+\begin{center}
+$\frac{dy}{dx}e^{(y-x)}=x$\\
+\end{center}
+
+con la condición inicial $ y(0)=ln{\left(2\right)}.$
+Solución: El primer paso es determinar si la ecuación es separable, es decir, si podemos hallar las funciones $  g(x)$ y $f(y)$. Vemos que
+
+\begin{center}
+$\frac{dy}{dx}e^{(y-x)}=x$\\
+$\frac{dy}{dx}e^ye^{-x}=x$\\
+$e^y\frac{dy}{dx}=xe^x$\\
+\end{center}
+
+Ya logramos escribir a la ecuación en la forma (5), de donde podemos establecer que
+\begin{center}
+$g(x)=xe^x\ \ \ \ \ y\ \ \ \ f(y)=e^y$\\
+\end{center}
+
+Usando la notación diferencial podemos escribir a la ecuación como
+\begin {center}
+$eydy=xe^xdx$\\
+\end {center}
+
+Integremos ambos lados de la ecuación ante la respectiva variable.
+\begin{center}
+$\int e^ydy=\int xe^xdx$\\
+\end{center}
+
+Por un lado,
+\begin {center}
+$\int e^ydy=e^y+k1$\\
+\end {center}
+
+Por otro lado, para la integral de x usemos integración por partes considerando $ u(x)=x\ \ \ y\ \ \ dv(x)=e^x$.
+\begin {center}
+
+$\int x e^xdx=xe^x-\int e^xdx$\\
+$=xe^x-(e^x+k2)$\\
+$=xe^x-e^x-k2$\\
+\end {center}
+
+Igualando ambos resultados obtenemos lo siguiente.
+\begin {center}
+$e^y+k1=xe^x-e^x-k2$\\
+$e^y=xe^x-e^x-k2-k1$\\
+$e^y=xe^x-e^x+c$\\
+\end {center}
+
+En donde  $c=-k2-k1$. Por lo tanto, la solución implícita es
+\begin {center}
+$e^y=xe^x-e^x+c$\\
+\end {center}
+
+Para conocer la solución explícita sólo tomamos el logaritmo natural.
+\begin {center}
+$y(x)=\ln{\left|xe^x-e^x+c\right|}$\\
+\end {center}
+
+Obtengamos la solución particular aplicando la condición inicial $y(0)=\ln{(2)}$\\
+\begin {center}
+$y\left(0\right)=\ln{\left|0e^0-e^o+c\right|=\ln{(2)}}$\\
+$y\left(0\right)=\ln{\left|0-1+c\right|=\ln{(2)}}$\\
+\end {center}
+
+De donde,
+\begin {center}
+$\ln{\left|c-1\right|}=\ln{(2)}$\\
+\end {center}
+
+Aplicando la exponencial en ambos lados, se tiene
+\begin {center}
+$c-1=2$\\
+\end {center}
+
+De donde $c=3$. Por lo tanto, la solución particular es
+\begin {center}
+$e^y=xe^x-e^x+3$\\
+\end {center}
+
+O bien,
+\begin {center}
+$y(x)=\left|xe^x-e^x+3\right|$\\
+\end {center}
+
+Este tipo de ecuaciones son muy sencillas de resolver, prácticamente se resuelven aplicando una integración directa.
+Veamos ahora las ecuaciones diferenciales no lineales homogéneas, lo interesante de este tipo de ecuaciones es que si hacemos un cambio de variable adecuado las podremos reducir a una ecuación separable las cuales ya sabemos resolver.
+
+
+
+\subsection{Ecuaciones diferenciales por sustitución}
+
+Para resolver una ecuación diferencial 
+Se reconoce ella cierto tipo de ecuación separable, por ejemplo 
+Aplacimos un procedimiento formado por etapas de tipo de ecuación que nos conducen a una función diferenciable, que satisface la ecuación 
+A menudo el primer paso es transfórmala en otra ecuación diferencial mediante sustitución 
+Supongamos que se quiere transformar la ecuación de primer orden 
+\begin{center}
+$\frac{dy}{dx}=f(x,y)$\\
+\end{center}
+
+Con la sustitución 
+\begin{center}
+
+$y=g(x,u)$\\
+\end{center}
+
+en que $ u$ se considera función de la variable $x$,si $g$ tiene primeras derivadas parciales entonces por la regla de la cadena da:
+\begin{center}
+
+$\frac{dy}{dx}=g_x(x,u)+g_u(x,u)\frac{du}{dx}$\\
+\end{center}
+
+Luego al sustituir 
+\begin{center}
+
+$\frac{dy}{dx}\ \ \ \ \ con\ \ \ \ \ f(x,y)$\\
+\end{center}
+
+En la derivada anterior obtenemos la nueva ecuación diferencial de primer orden 
+\begin{center}
+
+
+$f(x,g(x,u))=g_x(x,u)+g_u(x,u)\frac{du}{dx}$\\
+\end{center}
+
+
+
+\subsubsection{Metodología de 4 pasos para resolver ecuaciones diferenciales reducidas a variables separables}
+
+\begin{enumerate}
+
+
+
+\item Buscamos una sustitución que nos permita transformar a lineal o separable la ED.  Generalmente cuando tenemos:
+
+\begin{equation}
+\frac{dy}{dx}=f(Ax + By + C)\\
+\end{equation}
+
+Utilizamnos la sustitución:  $u=Ax + By + C$\\
+
+ Despejamos de la nueva función v , la variable y :
+ \begin{equation}
+y = \frac{u+Ax+C}{B}\\
+ \end{equation}
+Y derivamos para obtener\\
+\begin{equation}
+\frac{d y}{d x} = \frac{d u}{B d x} + \frac{A}{B}\\
+\end{equation}
+
+\item Sustituimos (10) y (11) en (9):
+
+\begin{eqnarray*}
+\frac{d y}{d x} & = & f (A x + B y + C)\\
+\frac{d u}{B d x} + \frac{A}{B} & = & f (u)\\
+\frac{d u}{B d x} & = & f (u) – \frac{A}{B}\\
+\frac{d u}{B d x} & = & \frac{f (u) \ast B – A}{B}
+\end{eqnarray*}
+
+\item Separamos variables e integramos:
+\begin{eqnarray*}
+\frac{d u}{B d x} & = & \frac{f (u) \ast B – A}{B}\\
+\frac{d u}{f (u) \ast B – A} & = & dx\\
+\int \frac{d u}{f (u) \ast B – A} & = & \int dx + C 1
+\end{eqnarray*}
+
+\item Regresamos a las variables originales.
+
+
+\end{enumerate}
+
+
+
+
+
+
+\subsubsection{Ejemplo}
+
+Ejercicios 2.5 Libro Dennis G. Zill (Problema 23)
+
+\begin{equation}
+\frac{d y}{d x} = (x + y + 1)^2\\	
+\end{equation}
+\begin{enumerate}
+
+\item Buscamos una sustitición para transformar en separable la ED.
+
+
+\begin{center}
+Si  $u = x + y + 1$\\
+\end{center}
+Entonces, despejando $y$, tenemos:
+\begin{equation}
+y = u – x – 1
+\end{equation}
+Esto implica:
+\begin{equation}
+\frac{d y}{d x} = \frac{d u}{d x} – 1
+\end{equation}
+
+\item  Sustituimos (13) y (14) en (12):
+\begin{eqnarray*}
+\frac{d y}{d x} & = & (x + y + 1)^2\\
+\frac{d u}{d x} – 1 & = & u^2\\
+\frac{d u}{d x} & = & u^2 + 1
+\end{eqnarray*}
+
+\item Separamos variables e integramos:
+\begin{eqnarray*}
+\frac{d u}{d x} & = & u^2 + 1\\
+\frac{d u}{u^2 + 1} & = & d x
+\end{eqnarray*}
+
+De modo que:
+
+\begin{center}
+$\int \frac{d u}{u^2 + 1} = \int d x + C$\\
+\end{center}
+
+Integrando, utilizamos la formula:
+\begin{center}
+$\int \frac{d T}{T^2 + 1} = \arctan (T)$\\
+\end{center}
+
+por tanto:
+\begin{eqnarray*}
+\int \frac{d u}{u^2 + 1} & = & \int d x + C\\
+\arctan (u) & = & x + C
+\end{eqnarray*}
+
+\item. Regrasamos a las variables originales:
+si $u=x+y+1$ , entonces:
+\begin{eqnarray*}
+\arctan (x + y + 1) & = & x + C\\
+x + y + 1 & = & \tan (x + C)\\
+y & = & \tan (x + C) – x – 1
+\end{eqnarray*}
+De modo que la solución es:
+\begin{center}
+$\ y = \tan{(x + C)} – x -1$\\
+\end{center}
+
+\end{enumerate}
+
+\pagebreak
+\section{Referencias}
+
+Martínez I Sandoval, 2021,Ecuaciones Diferenciales I: Ecuaciones diferenciales exactas tomado de: https://blog.nekomath.com/about/\\
+
+Martínez L Sandoval, 2021, Ecuaciones diferenciales no lineales de primer orden – Ecuaciones separables y homogéneas tomado de: https://blog.nekomath.com/tag/variables-separables/\\
+
+Vivas M Riverol Mayo 2, 2016, Ecuaciones diferenciales por sustitucion, tomado de: https://ecuaciondiferencialejerciciosresueltos.com/ecuaciones-diferenciales-por-sustitucion/\\
+
+
+
+\end{document}
